@@ -1,0 +1,22 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'Toggle redmine'
+      'command': 'redmine:toggle'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'redmine'
+      'submenu': [
+        {
+          'label': 'Toggle'
+          'command': 'redmine:toggle'
+        }
+      ]
+    ]
+  }
+]
