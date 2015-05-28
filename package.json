@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "atom-space-pen-views": "^2.0.5",
-    "promised-redmine": "^0.2.12"
+    "promised-redmine": "^0.2.12",
+    "season": "^5.2.0"
   }
 }
