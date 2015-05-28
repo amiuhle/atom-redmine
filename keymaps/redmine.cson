@@ -8,4 +8,5 @@
 # For more detailed documentation see
 # https://atom.io/docs/latest/behind-atom-keymaps-in-depth
 'atom-workspace':
-  'ctrl-alt-r': 'redmine:list-issues'
+  'ctrl-alt-r m': 'redmine:my-issues'
+  'ctrl-alt-r a': 'redmine:all-issues'

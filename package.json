@@ -6,8 +6,8 @@
   "keywords": [],
   "activationCommands": {
     "atom-workspace": [
-      "redmine:set-project",
-      "redmine:list-issues"
+      "redmine:my-issues",
+      "redmine:all-issues"
     ]
   },
   "repository": "https://github.com/atom/redmine",
