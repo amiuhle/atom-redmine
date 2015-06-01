@@ -3,7 +3,7 @@ Redmine
 
 View and open your Redmine issues in Atom.
 
-![Screenshot](doc/screenshot.png)
+![Screenshot](https://github.com/amiuhle/atom-redmine/raw/master/doc/screenshot.png)
 
 Configuration
 -------------
