@@ -21,6 +21,7 @@ Also, you have to create a `.atom-redmine` file in your project which contains t
 Roadmap
 -------
 
+* [ ] :exclamation: Add specs
 * [ ] View issue details
 * [ ] Edit / comment on issues
 * [ ] Fetch priorities and statuses on project load

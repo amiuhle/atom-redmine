@@ -2,15 +2,15 @@
   "name": "redmine",
   "main": "./lib/redmine",
   "version": "0.1.0",
-  "description": "A short description of your package",
-  "keywords": [],
+  "description": "View and open your Redmine issues in Atom.",
+  "keywords": ["redmine", "issues"],
   "activationCommands": {
     "atom-workspace": [
       "redmine:my-issues",
       "redmine:all-issues"
     ]
   },
-  "repository": "https://github.com/atom/redmine",
+  "repository": "https://github.com/amiuhle/atom-redmine",
   "license": "MIT",
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
