@@ -1,18 +1,24 @@
 {
   "name": "redmine",
   "main": "./lib/redmine",
-  "version": "0.0.0",
-  "description": "A short description of your package",
-  "keywords": [
-  ],
+  "version": "0.1.0",
+  "description": "View and open your Redmine issues in Atom.",
+  "keywords": ["redmine", "issues"],
   "activationCommands": {
-    "atom-workspace": "redmine:toggle"
+    "atom-workspace": [
+      "redmine:my-issues",
+      "redmine:all-issues"
+    ]
   },
-  "repository": "https://github.com/atom/redmine",
+  "repository": "https://github.com/amiuhle/atom-redmine",
   "license": "MIT",
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
   },
   "dependencies": {
+    "atom-space-pen-views": "^2.0.5",
+    "season": "^5.2.0",
+    "node-fetch": "^1.2.1",
+    "whatwg-fetch": "^0.8.2"
   }
 }
