@@ -1,9 +1,12 @@
 {
   "name": "redmine",
   "main": "./lib/redmine",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "View and open your Redmine issues in Atom.",
-  "keywords": ["redmine", "issues"],
+  "keywords": [
+    "redmine",
+    "issues"
+  ],
   "activationCommands": {
     "atom-workspace": [
       "redmine:my-issues",
