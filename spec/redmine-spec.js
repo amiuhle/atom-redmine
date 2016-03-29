@@ -3,7 +3,7 @@
 // TODO: where's this actually coming from?
 /* global waitsForPromise */
 
-// import Redmine from '../lib/redmine'
+import '../lib/redmine'
 
  // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
  //
@@ -15,30 +15,37 @@ describe('Redmine', () => {
 
   beforeEach(() => {
     workspaceElement = atom.views.getView(atom.workspace)
+    atom.config.set('host', 'www.example.com')
+    atom.config.set('apiKey', 'foobarbaz')
     activationPromise = atom.packages.activatePackage('redmine')
   })
 
-  describe('when the redmine:toggle event is triggered', () => {
+  describe('when the redmine:all-issues event is triggered', () => {
     it('hides and shows the modal panel', () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
-      expect(workspaceElement.querySelector('.redmine')).not.toExist()
+      expect(workspaceElement.querySelector('.redmine-issues')).not.toExist()
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'redmine:toggle')
+      atom.commands.dispatch(workspaceElement, 'redmine:all-issues')
+
+      // activationPromise.then((redmine) => {
+      //   console.log(redmine)
+      //   debugger
+      // })
 
       waitsForPromise(() => activationPromise)
 
       runs(() => {
-        expect(workspaceElement.querySelector('.redmine')).toExist()
+        expect(workspaceElement.querySelector('.redmine-issues')).toExist()
 
-        let redmineElement = workspaceElement.querySelector('.redmine')
+        let redmineElement = workspaceElement.querySelector('.redmine-issues')
         expect(redmineElement).toExist()
 
         let redminePanel = atom.workspace.panelForItem(redmineElement)
         expect(redminePanel.isVisible()).toBe(true)
-        atom.commands.dispatch(workspaceElement, 'redmine:toggle')
+        atom.commands.dispatch(workspaceElement, 'redmine:all-issues')
         expect(redminePanel.isVisible()).toBe(false)
       })
     })
